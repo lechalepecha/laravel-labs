@@ -323,6 +323,47 @@
 <script src="{{ asset('assets/admin/js/admin.js') }}"></script>
 
 
+<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+<script src="{{asset('assets/admin/ckfinder/ckfinder.js')}}"></script>
+
+
+<script type="text/javascript">
+
+
+ClassicEditor
+    .create( document.querySelector( '#content' ), {
+        ckfinder: {
+            uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+        },
+        toolbar: [  'heading', '|','undo', 'redo', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|', 'blockQuote', 'insertTable', 'alignment', '|', 'ckfinder', 'mediaEmbed'],
+        language: 'ru',
+        image: { toolbar: [
+          'imageTextAlternative',
+          'imageStyle:full',
+          'imageStyle:side'
+        ]},
+        table: { contentToolbar: [
+          'tableColumn',
+          'tableRow',
+          'mergeTableCells'
+        ]}
+    } )
+    .catch( function( error ) {
+        console.error( error );
+    } );
+
+
+    ClassicEditor
+    .create( document.querySelector( '#description' ), {
+        ckfinder: {
+            uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+        },
+        toolbar: ['heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ]
+    } )
+    .catch( function( error ) {
+        console.error( error );
+    } );
+</script>
 
 </body>
 </html>
