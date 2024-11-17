@@ -7,6 +7,11 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="{{ asset('assets/admin/css/admin.css') }}">
+  <style>
+    .ck-editor__editable_inline{
+      min-height: 300px;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -317,7 +322,7 @@
 
 <script src="{{ asset('assets/admin/js/admin.js') }}"></script>
 
-<script src="{{ asset("ckeditor5/ckeditor5.js") }}" ></script>
-<script src="{{ asset("ckfinder/ckfinder.js") }}" ></script>
+
+
 </body>
 </html>
