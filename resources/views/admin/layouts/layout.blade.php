@@ -316,5 +316,8 @@
 </div>
 
 <script src="{{ asset('assets/admin/js/admin.js') }}"></script>
+
+<script src="{{ asset("ckeditor5/ckeditor5.js") }}" ></script>
+<script src="{{ asset("ckfinder/ckfinder.js") }}" ></script>
 </body>
 </html>
