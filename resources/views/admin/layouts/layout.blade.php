@@ -323,7 +323,8 @@
 <script src="{{ asset('assets/admin/js/admin.js') }}"></script>
 
 
-<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+
 <script src="{{asset('assets/admin/ckfinder/ckfinder.js')}}"></script>
 
 
