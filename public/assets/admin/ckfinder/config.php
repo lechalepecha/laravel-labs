@@ -25,7 +25,24 @@ $config = array();
 /*============================ Enable PHP Connector HERE ==============================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_authentication
 
+use Illuminate\Support\Facades\Auth;
+
+//$config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 $config['authentication'] = function () {
+    /*require  $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+    $app = require_once  $_SERVER['DOCUMENT_ROOT']. '/bootstrap/app.php';
+    $response = $app->make('Illuminate\Contracts\Http\Kernel')->handle(Illuminate\Http\Request::capture());
+    $cookie = $_COOKIE[$app['config']['session']['cookie']] ?? false;
+    if ($cookie) {
+        $id = $app['encrypter']->decrypt($cookie, false);
+        $session = $app['session']->driver();
+        $session->setId($id);
+        $session->start();
+    }
+    
+    if (!$app['auth']->check()){
+        header('HTTP/1.0 403 Forbidden'); exit();
+    } */
     return true;
 };
 

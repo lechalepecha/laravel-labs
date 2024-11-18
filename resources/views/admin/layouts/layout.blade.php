@@ -336,13 +336,18 @@ ClassicEditor
         ckfinder: {
             uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
         },
+        image: {
+
+          toolbar: ['imageTextAlternative', '|', 'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight'],
+
+          styles: [
+            'full',
+            'alignLeft',
+            'alignRight'
+          ]
+        },
         toolbar: [  'heading', '|','undo', 'redo', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|', 'blockQuote', 'insertTable', 'alignment', '|', 'ckfinder', 'mediaEmbed'],
         language: 'ru',
-        image: { toolbar: [
-          'imageTextAlternative',
-          'imageStyle:full',
-          'imageStyle:side'
-        ]},
         table: { contentToolbar: [
           'tableColumn',
           'tableRow',
