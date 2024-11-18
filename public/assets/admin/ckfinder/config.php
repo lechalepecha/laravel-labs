@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Auth;
 
 //$config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 $config['authentication'] = function () {
-    /*require  $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+   /* require  $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
     $app = require_once  $_SERVER['DOCUMENT_ROOT']. '/bootstrap/app.php';
     $response = $app->make('Illuminate\Contracts\Http\Kernel')->handle(Illuminate\Http\Request::capture());
     $cookie = $_COOKIE[$app['config']['session']['cookie']] ?? false;
