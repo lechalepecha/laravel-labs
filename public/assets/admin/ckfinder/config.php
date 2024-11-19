@@ -25,11 +25,8 @@ $config = array();
 /*============================ Enable PHP Connector HERE ==============================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_authentication
 
-use Illuminate\Support\Facades\Auth;
-
-//$config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 $config['authentication'] = function () {
-   /* require  $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+    /*require  $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
     $app = require_once  $_SERVER['DOCUMENT_ROOT']. '/bootstrap/app.php';
     $response = $app->make('Illuminate\Contracts\Http\Kernel')->handle(Illuminate\Http\Request::capture());
     $cookie = $_COOKIE[$app['config']['session']['cookie']] ?? false;
@@ -39,10 +36,10 @@ $config['authentication'] = function () {
         $session->setId($id);
         $session->start();
     }
-    
-    if (!$app['auth']->check()){
+
+    if (!$app['auth']->check() || !$app['auth']->user()->is_admin){
         header('HTTP/1.0 403 Forbidden'); exit();
-    } */
+    }*/
     return true;
 };
 
@@ -83,7 +80,7 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => '/ckfinder/userfiles/',
+    'baseUrl'      => '/public/ckfinder/userfiles/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
